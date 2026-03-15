@@ -10,5 +10,5 @@ COPY --from=build /target/*.jar app.jar
 # Optimizing for Render's 512MB RAM limit
 ENV JAVA_OPTS="-Xmx384m -Xms256m -XX:+UseSerialGC"
 
-EXPOSE 8080
+EXPOSE 8085
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
